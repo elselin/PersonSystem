@@ -1,4 +1,4 @@
-package com.oocl.elvis.personsystem.model;
+package com.oocl.elvis.util;
 
 public interface LinkedListInterface <T>{
 	

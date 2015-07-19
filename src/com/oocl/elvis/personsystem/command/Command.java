@@ -2,11 +2,11 @@ package com.oocl.elvis.personsystem.command;
 
 public class Command implements CheckCommand {
 
-	int beginRow;
-	int endRow;
-	int sortType;
-	int findType;
-	int id;
+	private int beginRow;
+	private int endRow;
+	private int sortType;
+	private int findType;
+	private int id;
 
 	public static final int ASC = 1;
 	public static final int DESC = -1;

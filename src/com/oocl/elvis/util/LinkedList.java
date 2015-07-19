@@ -1,4 +1,4 @@
-package com.oocl.elvis.personsystem.model;
+package com.oocl.elvis.util;
 
 public class LinkedList<T> implements LinkedListInterface<T> {
 
@@ -91,8 +91,8 @@ public class LinkedList<T> implements LinkedListInterface<T> {
 		// 泛型之间的比较
 		ListNode<T> pre = new ListNode<T>();
 		nodePointer = head.next;
-		while (nodePointer.next != null) {
-			if (t.toString() == nodePointer.value.toString()) {
+		while (nodePointer!= null) {
+			if (t.toString().equals(nodePointer.value.toString())) {
 				pre = nodePointer;
 				nodePointer = nodePointer.next;
 				return true;

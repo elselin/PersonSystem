@@ -4,39 +4,27 @@ import java.util.Scanner;
 
 import com.oocl.elvis.personsystem.control.PersonSystemControlImpl;
 import com.oocl.elvis.personsystem.model.PersonBean;
-import com.oocl.elvis.personsystem.model.LinkedList;
+import com.oocl.elvis.util.LinkedList;
 
 public class Launcher {
 	public static void main(String[] args) {
 		/*
 		 * init Data
-		 */
+		 */		
 		LinkedList<PersonBean> pl = new LinkedList<PersonBean>();
-		PersonBean p1 = new PersonBean(1, "one", true, "2001", "ZHA",
-				"0671-277993");
-		PersonBean p2 = new PersonBean(2, "two", false, "2002", "ZHA",
-				"0671-277993");
-		PersonBean p3 = new PersonBean(3, "three", false, "2003", "ZHA",
-				"0671-277993");
-		PersonBean p4 = new PersonBean(4, "four", true, "2004", "ZHA",
-				"0671-277993");
-		PersonBean p5 = new PersonBean(5, "five", true, "2005", "ZHA",
-				"0671-277993");
-
+		Init.initData(pl);
+		/*
+		 * controller generate
+		 */
 		PersonSystemControlImpl controller = new PersonSystemControlImpl(pl);
-
-		pl.append(p1);
-		pl.append(p2);
-		pl.append(p3);
-		pl.append(p4);
-		pl.append(p5);		
-		
-		
+		/*
+		 * first time list
+		 */
 		controller.list();
 		System.out.println("\n"+pl.getLength() + " Person on list"+"\n");
 		
 		/*
-		 * Launcher
+		 * Launcher console input
 		 */
 		Scanner scan = new Scanner(System.in);
 		System.out.println("please input Command L D F S A Q");
@@ -47,17 +35,20 @@ public class Launcher {
 				controller.list();				
 				break;
 			case "L":
-				do {					
+				do {
+					System.out.println("Template: (row)1 / (row begin-row end)3-4");
 					command = scan.nextLine();
 				} while (!(controller.list(command)));
 				break;
 			case "D":
-				do {					
+				do {
+					System.out.println("Template: (row)1 / (row begin-row end)3-4");
 					command = scan.nextLine();
 				} while (!(controller.delete(command)));
 				break;
 			case "F":
-				do {					
+				do {
+					System.out.println("Template: (id)2 (eq/lt/gt)eq");
 					command = scan.nextLine();
 				} while (!(controller.find(command)));
 				break;
@@ -81,4 +72,6 @@ public class Launcher {
 			command = scan.nextLine();
 		}
 	}
+
+	
 }

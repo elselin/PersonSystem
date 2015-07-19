@@ -3,7 +3,7 @@ package com.oocl.elvis.personsystem.model;
 public class PersonBean {
 	private int id;
 	private String name;
-	private boolean sex;
+	private String sex;
 	private String birth;
 	private String address;
 	private String tele;
@@ -20,10 +20,10 @@ public class PersonBean {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public boolean isSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(boolean sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getBirth() {
@@ -46,11 +46,11 @@ public class PersonBean {
 	}
 	
 	public PersonBean() {
-		// TODO Auto-generated constructor stub
+		
 		
 	}
 	
-	public PersonBean(int id, String name, boolean sex, String birth, String address, String tele) {
+	public PersonBean(int id, String name, String sex, String birth, String address, String tele) {
 		this.setId(id);
 		this.setName(name);
 		this.setSex(sex);
@@ -60,16 +60,8 @@ public class PersonBean {
 	}
 	
 	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		String sexTra;
-		if(sex){
-			sexTra = "Female";
-		}else{
-			sexTra = "Male";
-		}
-		return this.id+"\t"+this.name+"\t"+sexTra+"\t"+this.birth+"\t"+this.address+"\t"+this.tele;
+	public String toString() {	
+		return this.id+"\t"+this.name+"\t"+sex+"\t"+this.birth+"\t"+this.address+"\t"+this.tele;
 	}
-	
+		
 }

@@ -1,4 +1,4 @@
-package com.oocl.elvis.personsystem.model;
+package com.oocl.elvis.util;
 
 
 public class ListNode <T>{
@@ -18,4 +18,22 @@ public class ListNode <T>{
 	        this.value = value;
 	        next=n;
 	    }
+
+		public T getValue() {
+			return value;
+		}
+
+		public void setValue(T value) {
+			this.value = value;
+		}
+
+		public ListNode<T> getNext() {
+			return next;
+		}
+
+		public void setNext(ListNode<T> next) {
+			this.next = next;
+		}
+
+		
 }
