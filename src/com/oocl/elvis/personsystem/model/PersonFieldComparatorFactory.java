@@ -3,10 +3,11 @@ package com.oocl.elvis.personsystem.model;
 import com.oocl.elvis.personsystem.model.comparator.*;
 
 /**
- * Person Field Comparator Factory
+ * Person Bean 的字段比较器工厂
  * 
  */
 public class PersonFieldComparatorFactory implements FieldComparatorFactory<PersonBean> {
+	
 	  private FieldComparator<PersonBean> id = new IDFieldComparator();
 	  private FieldComparator<PersonBean> name = new NameFieldComparator();
 	  private FieldComparator<PersonBean> sex = new SexFieldCompartor();
@@ -30,7 +31,5 @@ public class PersonFieldComparatorFactory implements FieldComparatorFactory<Pers
 	    } else {
 	      return null;
 	    }
-
 	  }
-
 }

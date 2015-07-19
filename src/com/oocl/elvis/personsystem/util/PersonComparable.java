@@ -1,5 +1,5 @@
-package com.oocl.elvis.util;
-/*
+package com.oocl.elvis.personsystem.util;
+/**
  * compare person  attribute
  */
 public interface PersonComparable<T> extends Comparable<T>{

@@ -1,5 +1,9 @@
 package com.oocl.elvis.personsystem.command;
-
+/**
+ * 指令类
+ * @author ElvisLin
+ *
+ */
 public class Command implements CheckCommand {
 
 	private int beginRow;

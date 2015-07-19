@@ -1,7 +1,9 @@
 package com.oocl.elvis.personsystem.model.comparator;
 
 import com.oocl.elvis.personsystem.model.PersonBean;
-
+/**
+ * for Birthday of user
+ */
 public class BirthFieldComparator implements FieldComparator<PersonBean> {
 
   public int compare(PersonBean o1, PersonBean o2) {

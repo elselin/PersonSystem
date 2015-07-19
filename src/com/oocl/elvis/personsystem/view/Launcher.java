@@ -4,28 +4,18 @@ import java.util.Scanner;
 
 import com.oocl.elvis.personsystem.control.PersonSystemControlImpl;
 import com.oocl.elvis.personsystem.model.PersonBean;
-import com.oocl.elvis.util.LinkedList;
+import com.oocl.elvis.personsystem.util.LinkedList;
 
 public class Launcher {
+	/*
+	 * 程序主入口
+	 */
 	public static void main(String[] args) {
-		/*
-		 * init Data
-		 */		
 		LinkedList<PersonBean> pl = new LinkedList<PersonBean>();
 		Init.initData(pl);
-		/*
-		 * controller generate
-		 */
 		PersonSystemControlImpl controller = new PersonSystemControlImpl(pl);
-		/*
-		 * first time list
-		 */
 		controller.list();
 		System.out.println("\n"+pl.getLength() + " Person on list"+"\n");
-		
-		/*
-		 * Launcher console input
-		 */
 		Scanner scan = new Scanner(System.in);
 		System.out.println("please input Command L D F S A Q");
 		String command = scan.nextLine();
@@ -72,6 +62,4 @@ public class Launcher {
 			command = scan.nextLine();
 		}
 	}
-
-	
 }

@@ -1,10 +1,13 @@
 package com.oocl.elvis.personsystem.view;
 
 import com.oocl.elvis.personsystem.model.PersonBean;
-import com.oocl.elvis.util.LinkedList;
+import com.oocl.elvis.personsystem.util.LinkedList;
 
 public class Init {
-	
+	/**
+	 * 数据初始化
+	 * @param LinkedList<PersonBean> 
+	 */
 	public static void initData(LinkedList<PersonBean> pl) {
 		
 		PersonBean p1 = new PersonBean(1, "one", "Female", "2001", "ZHA",

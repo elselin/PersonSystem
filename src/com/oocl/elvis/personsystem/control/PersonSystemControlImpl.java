@@ -7,7 +7,7 @@ import com.oocl.elvis.personsystem.command.Command;
 import com.oocl.elvis.personsystem.model.PersonBean;
 import com.oocl.elvis.personsystem.model.PersonFieldComparatorFactory;
 import com.oocl.elvis.personsystem.model.comparator.*;
-import com.oocl.elvis.util.LinkedList;
+import com.oocl.elvis.personsystem.util.LinkedList;
 
 public class PersonSystemControlImpl implements PersonSystemControl {
 
@@ -24,9 +24,6 @@ public class PersonSystemControlImpl implements PersonSystemControl {
 
 	@Override
 	public void list() {
-		/*
-		 * show all nodes
-		 */
 		System.out.println("id\tname\tsex\tbirth\taddre\t tele");
 		System.out.println("---------------------------------------");
 		list.list();
@@ -34,9 +31,6 @@ public class PersonSystemControlImpl implements PersonSystemControl {
 
 	@Override
 	public boolean list(String commandStr) {
-		/*
-		 * list showing in position...
-		 */
 		Command commandDelete = new Command();
 		commandDelete.checkCommandCount(commandStr);
 		System.out.println("id\tname\tsex\tbirth\taddre\t tele");
@@ -190,7 +184,6 @@ public class PersonSystemControlImpl implements PersonSystemControl {
 			/*
 			 * begin sort
 			 */
-			
 			Command comm = new Command();
 			comm.checkCommandSort(commandStr);
 			int flag = comm.getSortType();

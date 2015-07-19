@@ -1,4 +1,4 @@
-package com.oocl.elvis.util;
+package com.oocl.elvis.personsystem.util;
 
 
 public class ListNode <T>{

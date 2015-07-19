@@ -1,5 +1,9 @@
 package com.oocl.elvis.personsystem.model;
-
+/*
+ * Person Bean实体类
+ * 
+ * 
+ */
 public class PersonBean {
 	private int id;
 	private String name;
@@ -59,7 +63,10 @@ public class PersonBean {
 		this.setTele(tele);		
 	}
 	
-	
+	/*
+	 * 覆写toString方法(non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString() {	
 		return this.id+"\t"+this.name+"\t"+sex+"\t"+this.birth+"\t"+this.address+"\t"+this.tele;
 	}

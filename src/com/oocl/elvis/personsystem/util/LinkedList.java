@@ -1,4 +1,4 @@
-package com.oocl.elvis.util;
+package com.oocl.elvis.personsystem.util;
 
 public class LinkedList<T> implements LinkedListInterface<T> {
 
@@ -88,7 +88,7 @@ public class LinkedList<T> implements LinkedListInterface<T> {
 	@Override
 	public boolean delete(T t) {
 		// TODO Auto-generated method stub
-		// 泛型之间的比较
+		// 泛型之间的比�?
 		ListNode<T> pre = new ListNode<T>();
 		nodePointer = head.next;
 		while (nodePointer!= null) {
@@ -135,7 +135,6 @@ public class LinkedList<T> implements LinkedListInterface<T> {
 
 	@Override
 	public int getIndex(T t) {
-		// TODO Auto-generated method stub
 		int pos = 0;
 		nodePointer = head.next;
 		while (nodePointer.next != null) {
